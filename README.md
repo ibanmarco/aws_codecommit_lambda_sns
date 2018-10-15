@@ -7,7 +7,7 @@ This code will deploy a lambda function that will call to SNS to email notificat
 You can see the codecommit events through CloudTrail using the follow command where $PROFILE is the profile you are using and $EPOCH_TIMESTAMP is the date in epoch.
 
 ```bash
-aws --profile $YOUR_PROFILE cloudtrail lookup-events --lookup-attributes AttributeKey=EventSource,AttributeValue=codecommit.amazonaws.com --start-time $EPOCH_TIMESTAMP --end-time $EPOCH_TIMESTAMP --max-results 10
+aws --profile $PROFILE cloudtrail lookup-events --lookup-attributes AttributeKey=EventSource,AttributeValue=codecommit.amazonaws.com --start-time $EPOCH_TIMESTAMP --end-time $EPOCH_TIMESTAMP --max-results 10
 ```
 
 - This code has been created to be used with the profile configured on ~/.aws/credentials. You can easily modify this code to assume a role if you are using a Pipeline with cross-accounts and also add a buildspec file to perform this code.
