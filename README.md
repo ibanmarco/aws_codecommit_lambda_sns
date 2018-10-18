@@ -2,7 +2,7 @@
 
 ![Minimal Screenshot](img/diagram.png)
 
-This code will deploy a lambda function that will call to SNS to email notification everytime that a pull request or merge is done. Basically, once a pull request or merge is done, a CloudWatch rule will be trigged and the lambda function will be invoked.
+This code will deploy a lambda function that will call SNS to email notification everytime that a pull request or merge is done. Basically, once a pull request or merge is done, a CloudWatch rule will be trigged and the lambda function will be invoked.
 
 You can see the codecommit events through CloudTrail using the follow command where $PROFILE is the profile you are using and $EPOCH_TIMESTAMP is the date in epoch.
 
